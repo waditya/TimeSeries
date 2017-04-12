@@ -29,3 +29,16 @@ discrete_time_index <-1:20
 
 # Now plot the continuous_series using discrete time indexing
 plot(discrete_time_index,continuous_series, type = "b")
+
+# Plot AirPassengers
+plot(AirPassengers)
+
+# View the start and end dates of AirPassengers
+start(AirPassengers)
+end(AirPassengers)
+
+# Use time(), deltat(), frequency(), and cycle() with AirPassengers 
+time(AirPassengers)
+deltat(AirPassengers)
+frequency(AirPassengers)
+cycle(AirPassengers)
