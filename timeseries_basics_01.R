@@ -20,3 +20,12 @@ plot(Nile, xlab = "Year", ylab = "River Volume (1e9 m^{3})")
 # Plot the Nile data with xlab, ylab, main, and type arguments
 plot(Nile, xlab = "Year", ylab = "River Volume (1e9 m^{3})", main = "Annual River Nile Volume at Aswan, 1871-1970", type ="b")
 
+# Plot the continuous_series using continuous time indexing
+par(mfrow=c(2,1))
+plot(continuous_time_index,continuous_series, type = "b")
+
+# Make a discrete time index using 1:20 
+discrete_time_index <-1:20
+
+# Now plot the continuous_series using discrete time indexing
+plot(discrete_time_index,continuous_series, type = "b")
