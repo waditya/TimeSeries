@@ -71,5 +71,14 @@ time_series <- ts(data_vector, start = 2004, frequency = 4)
 print(time_series)
 plot(time_series)
   
+# Check whether data_vector and time_series are ts objects
+is.ts(data_vector)
+is.ts(time_series)
+
+# Check whether Nile is a ts object
+is.ts(Nile)
+
+# Check whether AirPassengers is a ts object
+is.ts(AirPassengers)
 
 
