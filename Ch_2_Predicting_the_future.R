@@ -162,5 +162,31 @@ ts.plot(random_walk)
 # Use abline(0, ...) to add time trend to the figure
 abline(a= NULL, b = int_wn)
 
+# Are the white noise model or the random walk model stationary?
+
+# The white noise (WN) and random walk (RW) models are very closely related. However, only the RW is always non-stationary, both with and without a drift term. 
+
+# This is a simulation exercise to highlight the differences.
+
+# Recall that if we start with a mean zero WN process and compute its running or cumulative sum, the result is a RW process. 
+
+# The cumsum() function will make this transformation for you. 
+
+# Similarly, if we create a WN process, but change its mean from zero, and then compute its cumulative sum, the result is a RW process with a drift.
+
+# Use arima.sim() to generate WN data
+white_noise <- arima.sim(model = list(order = c (0, 0, 0)), n = 100)
+
+# Use cumsum() to convert your WN data to RW
+random_walk <- cumsum(white_noise)
+  
+# Use arima.sim() to generate WN drift data
+wn_drift <- arima.sim(model = list(order = c (0, 0, 0)), n = 100, mean = 0.4)
+  
+# Use cumsum() to convert your WN drift data to RW
+rw_drift <- cumsum(wn_drift)
+
+# Plot all four data objects
+plot.ts(cbind(white_noise, random_walk, wn_drift, rw_drift))
 
 
