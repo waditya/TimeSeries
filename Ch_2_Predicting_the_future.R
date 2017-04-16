@@ -102,4 +102,30 @@ random_walk_diff <- diff(random_walk)
 # Plot random_walk_diff
 ts.plot(random_walk_diff)
   
+# Simulate the random walk model with a drift
 
+# A random walk (RW) need not wander about zero, it can have an upward or downward trajectory, i.e., 
+
+# a drift or time trend. This is done by including an intercept in the RW model, which corresponds to the slope of the RW time trend.
+
+# For an alternative formulation, you can take the cumulative sum of a constant mean white noise (WN) series, 
+
+# such that the mean corresponds to the slope of the RW time trend.
+
+# To simulate data from the RW model with a drift you again use the arima.sim() function with 
+
+# the model = list(order = c(0, 1, 0)) argument. This time, you should add 
+
+# the additional argument mean = ... to specify the drift variable, or the intercept.
+
+# Generate a RW model with a drift uing arima.sim
+rw_drift <- arima.sim(model = list(order = c(0, 1, 0)), n = 100, mean = 1)
+
+# Plot rw_drift
+ts.plot(rw_drift)
+
+# Calculate the first difference series
+rw_drift_diff <- diff(rw_drift)
+
+# Plot rw_drift_diff
+ts.plot(rw_drift_diff)
