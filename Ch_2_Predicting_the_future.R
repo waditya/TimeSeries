@@ -129,3 +129,38 @@ rw_drift_diff <- diff(rw_drift)
 
 # Plot rw_drift_diff
 ts.plot(rw_drift_diff)
+
+# Estimate the random walk model
+
+# For a given time series y we can fit the random walk model with a drift by first differencing the data, 
+
+# then fitting the white noise (WN) model to the differenced data using the arima() command with the order = c(0, 0, 0)) argument.
+
+# The arima() command displays information or output about the fitted model. 
+
+# Under the Coefficients: heading is the estimated drift variable, named the intercept. 
+
+# Its approximate standard error (or s.e.) is provided directly below it. 
+
+# The variance of the WN part of the model is also estimated under the label sigma^2.
+
+# Difference your random_walk data
+rw_diff <- diff(random_walk)
+
+# Plot rw_diff
+ts.plot(rw_diff)
+
+# Now fit the WN model to the differenced data
+model_wn <- arima(rw_diff, order = c(0,0,0))
+
+# Store the value of the estimated time trend (intercept)
+int_wn <- model_wn$coef
+
+# Plot the original random_walk data
+ts.plot(random_walk)
+
+# Use abline(0, ...) to add time trend to the figure
+abline(a= NULL, b = int_wn)
+
+
+
