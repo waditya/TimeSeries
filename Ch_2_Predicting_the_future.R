@@ -78,5 +78,28 @@ arima(y, order = c (0, 0, 0))
 mean(y)
 var(y)
 
+Simulate the random walk model
 
+# The random walk (RW) model is also a basic time series model. It is the cumulative sum (or integration) of a mean zero white noise (WN) series, 
+
+# such that the first difference series of a RW is a WN series. 
+
+# Note for reference that the RW model is an ARIMA(0, 1, 0) model, in which the middle entry of 1 indicates that the model's order of integration is 1.
+
+# The arima.sim() function can be used to simulate data from the RW by including the model = list(order = c(0, 1, 0)) argument. We also need to specify a 
+
+# series length n. Finally, you can specify a sd for the series (increments), where the default value is 1.
+
+# Generate a RW model using arima.sim
+random_walk <- arima.sim(model = list(order = c(0, 1, 0)), n = 100)
+
+# Plot random_walk
+ts.plot(random_walk)
+
+# Calculate the first difference series
+random_walk_diff <- diff(random_walk) 
+
+# Plot random_walk_diff
+ts.plot(random_walk_diff)
+  
 
