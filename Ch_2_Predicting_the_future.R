@@ -57,3 +57,26 @@ white_noise_2 <- arima.sim(model = list(order = c(0, 0, 0)), n = 100, mean = 100
 # Plot your white_noise_2 data
 ts.plot(white_noise_2)
 
+# Estimate the white noise model
+
+# For a given time series y we can fit the white noise (WN) model using the arima(..., order = c(0, 0, 0)) function. 
+
+# Recall that the WN model is an ARIMA(0,0,0) model. Applying the arima() function returns information or output about the estimated model. 
+
+# For the WN model this includes the estimated mean, labeled intercept, and the estimated variance, labeled sigma^2.
+
+# In this exercise, you'll explore the qualities of the WN model. What is the estimated mean? Compare this with the sample mean using the mean() function. 
+
+# What is the estimated variance? Compare this with the sample variance using the var() function.
+
+# The time series y has already been loaded, and is shown in the adjoining figure.
+
+# Fit the WN model to y using the arima command
+arima(y, order = c (0, 0, 0))
+
+# Calculate the sample mean and sample variance of y
+mean(y)
+var(y)
+
+
+
