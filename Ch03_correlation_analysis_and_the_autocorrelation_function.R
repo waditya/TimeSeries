@@ -21,3 +21,22 @@
 # As you will see later, one advantage of using log returns is that calculating multi-period returns from individual periods is greatly simplified - you just add them together!
 
 # In this exercise, you will further explore the eu_stocks dataset, including plotting prices, converting prices to (net) returns, and converting prices to log returns
+
+# Plot eu_stocks
+plot(eu_stocks)
+
+# Use this code to convert prices to returns
+returns <- eu_stocks[-1,] / eu_stocks[-1860,] - 1
+
+# Convert returns to ts
+returns <- ts(returns, start = c(1991, 130), frequency = 260)
+
+# Plot returns
+plot(returns)
+
+# Use this code to convert prices to log returns
+logreturns <- diff(log(eu_stocks))
+
+# Plot logreturns
+plot(logreturns)
+
