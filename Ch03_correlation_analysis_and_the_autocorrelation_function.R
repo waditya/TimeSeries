@@ -73,3 +73,19 @@ qqline(eu_percentreturns)
 # easily make a scatterplot of these indices. Note that the normal distribution has elliptical contours of equal probability, and pairs of data 
 # drawn from the multivariate normal distribution form a roughly elliptically shaped point cloud. 
 # Do any of the pairs in the scatterplot matrices exhibit this pattern, before or after log transformation?
+
+# Make a scatterplot of DAX and FTSE
+plot(DAX, FTSE)
+
+# Make a scatterplot matrix of eu_stocks
+pairs(eu_stocks)
+
+# Convert eu_stocks to log returns
+logreturns <- diff(log(eu_stocks))
+
+# Plot logreturns
+plot(logreturns)
+
+# Make a scatterplot matrix of logreturns
+pairs(logreturns)
+
