@@ -178,3 +178,13 @@ acf(x, lag.max = 10, plot = FALSE)
 
 # Type the ACF estimate at lag-5
 0.198
+
+# View the ACF of x
+acf(x)
+
+# View the ACF of y
+acf(y)
+
+# View the ACF of z
+acf(z)
+
