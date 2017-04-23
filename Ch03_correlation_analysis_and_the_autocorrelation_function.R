@@ -170,3 +170,11 @@ cor(x_t1, x_t0) * (n-1)/n
 # In this exercise, you will explore some further applications of the acf() command. Once again, the time series 
 # x has been preloaded for you and is shown in the plot on the right.
 
+# Generate ACF estimates for x up to lag-10
+acf(x, lag.max = 10, plot = FALSE)
+
+# Type the ACF estimate at lag-10 
+0.100
+
+# Type the ACF estimate at lag-5
+0.198
