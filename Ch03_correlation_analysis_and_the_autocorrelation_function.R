@@ -158,3 +158,15 @@ acf(x, lag.max = 1, plot = FALSE)
 
 # Confirm that difference factor is (n-1)/n 
 cor(x_t1, x_t0) * (n-1)/n
+
+#The autocorrelation function
+
+# Autocorrelations can be estimated at many lags to better assess how a time series relates to its past. 
+# We are typically most interested in how a series relates to its most recent past.
+
+# The acf(..., lag.max = ..., plot = FALSE) function will estimate all autocorrelations from 0, 1, 2,..., up to the 
+# value specified by the argument lag.max. In the previous exercise, you focused on the lag-1 autocorrelation by setting the lag.max argument to 1.
+
+# In this exercise, you will explore some further applications of the acf() command. Once again, the time series 
+# x has been preloaded for you and is shown in the plot on the right.
+
