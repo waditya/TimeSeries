@@ -89,3 +89,5 @@ plot(logreturns)
 # Make a scatterplot matrix of logreturns
 pairs(logreturns)
 
+#Calculating sample covariances and correlations
+
