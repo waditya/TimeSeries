@@ -45,3 +45,12 @@ acf(z)
 #Compare the random walk (RW) and autoregressive (AR) models
 
 
+# The random walk (RW) model is a special case of the autoregressive (AR) model, in which the slope parameter is equal to 1. 
+# Recall from previous chapters that the RW model is not stationary and exhibits very strong persistence. 
+# Its sample autocovariance function (ACF) also decays to zero very slowly, meaning past values have a long lasting impact on current values.
+
+# The stationary AR model has a slope parameter between -1 and 1. The AR model exhibits higher persistence when its slope parameter
+ # is closer to 1, but the process reverts to its mean fairly quickly. Its sample ACF also decays to zero at a quick (geometric) rate, 
+ # indicating that values far in the past have little impact on future values of the process.
+
+# In this exercise, you will explore these qualities by simulating and plotting additional data from an AR model.
