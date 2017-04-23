@@ -137,3 +137,24 @@ cor(logreturns)
 
 # In this exercise, you will practice both the manual and automatic calculation of a lag-1 autocorrelation. 
 # # The time series x and its length n (150) have already been loaded. The series is shown in the plot on the right.
+
+# Define x_t0 as x[-1]
+x_t0 <- x[-1] 
+
+# Define x_t1 as x[-n]
+x_t1 <- x[-n]
+
+# Confirm that x_t0 and x_t1 are (x[t], x[t-1]) pairs  
+head(cbind(x_t0, x_t1))
+  
+# Plot x_t0 and x_t1
+plot(x_t0, x_t1)
+
+# View the correlation between x_t0 and x_t1
+cor(x_t0, x_t1)
+
+# Use acf with x
+acf(x, lag.max = 1, plot = FALSE)
+
+# Confirm that difference factor is (n-1)/n 
+cor(x_t1, x_t0) * (n-1)/n
