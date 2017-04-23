@@ -70,3 +70,33 @@ z <- arima.sim(model = list(order = c(0, 1, 0)), n = 200)
 ts.plot(z)
 acf(z)
 
+#Estimate the autoregressive (AR) model
+
+# For a given time series x we can fit the autoregressive (AR) model using the arima() command and setting order equal to c(1, 0, 0). 
+# Note for reference that an AR model is an ARIMA(1, 0, 0) model.
+
+# In this exercise, you will explore additional qualities of the AR model by practicing the arima() command on a simulated time series x 
+# as well as the AirPassengers data. This command allows you to identify the estimated slope (ar1), mean (intercept), and innovation variance (sigma^2) of the model.
+
+# Both xand the AirPassengers data are preloaded in your environment. The time series x is shown in the figure on the right.
+
+# Fit the AR model to x
+arima(x, order = c(1, 0, 0))
+
+# Copy and paste the slope (ar1) estimate
+0.8575
+
+# Copy and paste the slope mean (intercept) estimate
+-0.0948
+
+# Copy and paste the innovation variance (sigma^2) estimate
+1.022
+
+# Fit the AR model to AirPassengers
+AR <- arima(AirPassengers, order = c(1, 0, 0))
+print(AR)
+
+# Run the following commands to plot the series and fitted values
+ts.plot(AirPassengers)
+AR_fitted <- AirPassengers - residuals(AR)
+points(AR_fitted, type = "l", col = 2, lty = 2)
