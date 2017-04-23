@@ -41,3 +41,7 @@ acf(y)
 
 # Calculate the ACF for z
 acf(z)
+
+#Compare the random walk (RW) and autoregressive (AR) models
+
+
