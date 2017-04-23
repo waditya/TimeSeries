@@ -117,3 +117,23 @@ cor(DAX_logreturns, FTSE_logreturns)
 cor(logreturns)
 
 #Calculating autocorrelations
+
+# Autocorrelations or lagged correlations are used to assess whether a time series is dependent on its past. 
+# For a time series x of length n we consider the n-1 pairs of observations one time unit apart. 
+# The first such pair is (x[2],x[1]), and the next is (x[3],x[2]). Each such pair is of the form (x[t],x[t-1]) where 
+# t is the observation index, which we vary from 2 to n in this case. The lag-1 autocorrelation of x can be estimated 
+# as the sample correlation of these (x[t], x[t-1]) pairs.
+
+# In general, we can manually create these pairs of observations. First, create two vectors, x_t0 and x_t1, 
+# each with length n-1, such that the rows correspond to (x[t], x[t-1]) pairs. Then apply the cor() function 
+# to estimate the lag-1 autocorrelation.
+
+# Luckily, the acf() command provides a shortcut. Applying acf(..., lag.max = 1, plot = FALSE) to a series x 
+# automatically calculates the lag-1 autocorrelation.
+
+# Finally, note that the two estimates differ slightly as they use slightly different scalings in 
+# their calculation of sample covariance, 1/(n-1) versus 1/n. Although the latter would provide a biased estimate, 
+# it is preferred in time series analysis, and the resulting autocorrelation estimates only differ by a factor of (n-1)/n.
+
+# In this exercise, you will practice both the manual and automatic calculation of a lag-1 autocorrelation. 
+# # The time series x and its length n (150) have already been loaded. The series is shown in the plot on the right.
