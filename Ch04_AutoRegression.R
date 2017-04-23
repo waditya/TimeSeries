@@ -23,3 +23,6 @@ z <-  arima.sim(model = list(ar = -0.75), n= 100)
 
 # Plot your simulated data
 plot.ts(cbind(x, y, z))
+
+#Estimate the autocorrelation function (ACF) for an autoregression
+
