@@ -57,3 +57,19 @@ apply(eu_percentreturns, MARGIN = 2, FUN = hist, main = "", xlab = "Percentage R
 par(mfrow = c(2,2))
 apply(eu_percentreturns, MARGIN = 2, FUN = qqnorm, main = "")
 qqline(eu_percentreturns)
+
+##Plotting pairs of data
+# Time series data is often presented in a time series plot. For example, the index values from the eu_stocks dataset are shown in the adjoining figure. 
+# Recall, eu_stocks contains daily closing prices from 1991-1998 for the major stock indices in Germany (DAX), Switzerland (SMI), France (CAC), and the UK (FTSE).
+
+# It is also useful to examine the bivariate relationship between pairs of time series. In this exercise we will consider the contemporaneous relationship, 
+# that is matching observations that occur at the same time, between pairs of index values as well as their log returns. 
+# The plot(a, b) function will produce a scatterplot when two time series names a and b are given as input.
+
+# To simultaneously make scatterplots for all pairs of several assets the pairs() function can be applied to produce a scatterplot matrix. 
+# When shared time trends are present in prices or index values it is common to instead compare their returns or log returns.
+
+# In this exercise, you'll practice these skills on the eu_stocks data. Because the DAX and FTSE returns have similar time coverage, you can 
+# easily make a scatterplot of these indices. Note that the normal distribution has elliptical contours of equal probability, and pairs of data 
+# drawn from the multivariate normal distribution form a roughly elliptically shaped point cloud. 
+# Do any of the pairs in the scatterplot matrices exhibit this pattern, before or after log transformation?
