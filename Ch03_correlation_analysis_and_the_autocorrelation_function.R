@@ -103,3 +103,16 @@ pairs(logreturns)
 # as well as a matrix containing several variables, and the output is interpreted analogously.
 
 # In this exercise, you'll use cov() and cor() to explore your logreturns data.
+
+# Use cov() with DAX_logreturns and FTSE_logreturns
+cov(DAX_logreturns, FTSE_logreturns)
+
+# Use cov() with logreturns
+cov(logreturns)
+
+# Use cor() with DAX_logreturns and FTSE_logreturns
+cor(DAX_logreturns, FTSE_logreturns)
+
+# Use cor() with logreturns
+cor(logreturns)
+
