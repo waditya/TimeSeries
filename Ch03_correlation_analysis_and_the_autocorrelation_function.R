@@ -116,3 +116,4 @@ cor(DAX_logreturns, FTSE_logreturns)
 # Use cor() with logreturns
 cor(logreturns)
 
+#Calculating autocorrelations
