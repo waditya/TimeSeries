@@ -26,3 +26,9 @@ plot.ts(cbind(x, y, z))
 
 #Estimate the autocorrelation function (ACF) for an autoregression
 
+# What if you need to estimate the autocorrelation function from your data? To do so, you will need the acf() command, 
+# which estimates autocorrelation by exploring lags in your data. By default, this command generates a plot of the relationship 
+# between the current observation and lags extending backwards.
+
+# In this exercise, you'll use the acf() command to estimate the autocorrelation function for three new simulated AR series (x, y, and z). 
+# These objects have slope parameters 0.5, 0.9, and -0.75, respectively, and are shown in the adjoining figure.
