@@ -32,3 +32,12 @@ plot.ts(cbind(x, y, z))
 
 # In this exercise, you'll use the acf() command to estimate the autocorrelation function for three new simulated AR series (x, y, and z). 
 # These objects have slope parameters 0.5, 0.9, and -0.75, respectively, and are shown in the adjoining figure.
+
+# Calculate the ACF for x
+acf(x)
+
+# Calculate the ACF for y
+acf(y)
+
+# Calculate the ACF for z
+acf(z)
