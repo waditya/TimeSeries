@@ -19,3 +19,20 @@ z <- arima.sim(model = list(ma = -0.5), n = 100)
 # Plot all three models together
 plot.ts(cbind(x, y, z))
 
+#Estimate the autocorrelation function (ACF) for a moving average
+
+# Now that you've simulated some MA data using the arima.sim() command, you may want to estimate the autocorrelation functions (ACF) for your data. 
+# As in the previous chapter, you can use the acf() command to generate plots of the autocorrelation in your MA data.
+
+# In this exercise, you'll use acf() to estimate the ACF for three simulated MA series, x, y, and z. 
+# These series have slope parameters of 0.4, 0.9, and -0.75, respectively, and are shown in the figure on the right.
+
+# Instructions
+# Calculate ACF for x
+acf(x)
+
+# Calculate ACF for y
+acf(y)
+
+# Calculate ACF for z
+acf(z)
