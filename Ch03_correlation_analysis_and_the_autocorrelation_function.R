@@ -91,3 +91,15 @@ pairs(logreturns)
 
 #Calculating sample covariances and correlations
 
+# Sample covariances measure the strength of the linear relationship between matched pairs of variables. 
+# The cov() function can be used to calculate covariances for a pair of variables, or a covariance matrix
+ # when a matrix containing several variables is given as input. For the latter case, the matrix is symmetric 
+ # with covariances between variables on the off-diagonal and variances of the variables along the diagonal. 
+ # On the right you can see the scatterplot matrix of your logreturns data.
+
+# Covariances are very important throughout finance, but they are not scale free and they can be difficult to directly interpret. 
+# Correlation is the standardized version of covariance that ranges in value from -1 to 1, where values close to 1 in magnitude 
+# indicate a strong linear relationship between pairs of variables. The cor() function can be applied to both pairs of variables 
+# as well as a matrix containing several variables, and the output is interpreted analogously.
+
+# In this exercise, you'll use cov() and cor() to explore your logreturns data.
