@@ -35,3 +35,26 @@ acf2(x)
 # Fit an AR(1) to the data and examine the t-table
 
 sarima(x, p = 1 , d = 0 , q = 0)
+
+# Fitting an AR(2) Model
+
+# For this exercise, we generated data from the AR(2) model,
+# Xt=1.5Xt−1−.75Xt−2+Wt,
+# Xt=1.5Xt−1−.75Xt−2+Wt,
+# using x <- arima.sim(model = list(order = c(2, 0, 0), ar = c(1.5, -.75)), n = 200). 
+
+# Look at the simulated data and the sample ACF and PACF pair to determine the model order. 
+
+# Then fit the model and compare the estimated parameters to the true parameters.
+
+# Instructions
+
+# The package astsa is preloaded. x contains the 200 AR(2) observations.
+
+# Use plot() to plot the generated data in x.
+
+# Plot the sample ACF and PACF pair using acf2() from the astsa package.
+
+# Use sarima() to fit an AR(2) to the previously generated data in x. Examine the t-table and compare the estimates to the true values.
+
+
