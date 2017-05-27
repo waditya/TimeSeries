@@ -1,1 +1,37 @@
-#Fitting ARMA models
+
+# II Fitting ARMA models
+
+Fitting an AR(1) Model
+
+# In this exercise, you will generate data from the AR(1) model,
+# Xt=.9Xt−1+Wt,
+# Xt=.9Xt−1+Wt,
+# look at the simulated data and the sample ACF and PACF pair to determine the order. 
+#Then, you will fit the model and compare the estimated parameters to the true parameters.
+
+# Throughout this course, you will be using sarima() from the astsa package to easily fit models to data. 
+#The command produces a residual diagnostic graphic that can be ignored until diagnostics is discussed later in the chapter.
+
+# Instructions
+
+# The package astsa is preloaded.
+# Use the prewritten arima.sim() command to generate 100 observations from an AR(1) model with AR parameter .9. Save this to x.
+# Plot the generated data using plot().
+# Plot the sample ACF and PACF pairs using the acf2() command from the astsa package.
+
+# Use sarima() from astsa to fit an AR(1) to the previously generated data. Examine the t-table and compare the estimates to the true values. 
+
+# For example, if the time series is in x, to fit an AR(1) to the data, use sarima(x, p = 1, d = 0, q = 0) or simply sarima(x, 1, 0, 0).
+
+# Generate 100 observations from the AR(1) model
+x <- arima.sim(model = list(order = c(1, 0, 0), ar = .9), n = 100) 
+
+# Plot the generated data 
+plot(x)
+
+# Plot the sample P/ACF pair
+acf2(x)
+
+# Fit an AR(1) to the data and examine the t-table
+
+sarima(x, p = 1 , d = 0 , q = 0)
