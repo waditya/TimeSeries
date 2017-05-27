@@ -68,3 +68,23 @@ acf2(x)
 # Fit an AR(2) to the data and examine the t-table
 sarima(x,p=2, d= 0 , q = 0)
 
+# In this exercise, we generated data from an MA(1) model,
+# Xt=Wt−.8Wt−1,
+# Xt=Wt−.8Wt−1,
+# x <- arima.sim(model = list(order = c(0, 0, 1), ma = -.8), n = 100). 
+
+#Look at the simulated data and the sample ACF and PACF to determine the order based on the table given in the first exercise. Then fit the model.
+
+# Recall that for pure MA(q) models, the theoretical ACF will cut off at lag q while the PACF will tail off.
+
+# Instructions
+
+# The package astsa is preloaded. 100 MA(1) observations are available in your workspace as x.
+
+# Use plot() to plot the generated data in x.
+
+# Plot the sample ACF and PACF pairs using acf2() from the astsa package.
+
+# # Use sarima() from astsa to fit an MA(1) to the previously generated data. Examine the t-table and compare the estimates to the true values
+
+
