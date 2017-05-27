@@ -87,4 +87,14 @@ sarima(x,p=2, d= 0 , q = 0)
 
 # # Use sarima() from astsa to fit an MA(1) to the previously generated data. Examine the t-table and compare the estimates to the true values
 
+# astsa is preloaded
+
+# Plot x
+plot(x)
+
+# Plot the sample P/ACF of x
+acf2(x)
+
+# Fit an MA(1) to the data and examine the t-table
+sarima(x,0,0,1)
 
