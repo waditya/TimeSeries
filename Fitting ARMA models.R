@@ -168,3 +168,36 @@ sarima(dl_varve, 1 ,0, 1)
 # Instructions
 # Use sarima() to fit an MA(1) to dl_varve and do a complete residual analysis as prescribed above. Make a note of what you see for the next exercise.
 # Use another call to sarima() to fit an ARMA(1,1) to dl_varve and do a complete residual analysis as prescribed above. Again, make a note of what you see for the next exercise.
+
+# ARMA get in
+
+# By now you have gained considerable experience fitting ARMA models to data, but before you start celebrating, try one more exercise (sort of) on your own.
+
+# The data in oil are crude oil, WTI spot price FOB (in dollars per barrel), weekly data from 2000 to 2008. Use your skills to fit an ARMA model to the returns. The weekly crude oil prices (oil) are plotted for you. Throughout the exercise, work with the returns, which you will calculate.
+
+# As before, the astsa package is preloaded for you. The data are preloaded as oil and plotted on the right.
+
+# Instructions
+
+# Calculate the approximate crude oil price returns using diff() and log(). Put the returns in oil_returns.
+
+# Plot oil_returns and notice that there are a couple of outliers prior to 2004. Convince yourself that the returns are stationary.
+
+# Plot the sample ACF and PACF of the oil_returns using acf2() from the astsa package.
+
+# From the P/ACF pair, it is apparent that the correlations are small and the returns are nearly noise. 
+# But it could be that both the ACF and PACF are tailing off. If this is the case, then an ARMA(1,1) is suggested. 
+
+# Fit this model to the oil returns using sarima(). Does the model fit well? Can you see the outliers in the residual plot?
+
+# Calculate approximate oil returns
+oil_returns <- diff(log(oil))
+
+# Plot oil_returns. Notice the outliers.
+plot(oil_returns)
+
+# Plot the P/ACF pair for oil_returns
+acf2(oil_returns)
+
+# Assuming both P/ACF are tailing, fit a model to oil_returns
+sarima(oil_returns, 1, 0, 1)
