@@ -123,3 +123,33 @@ acf2(x)
 # Fit an ARMA(2,1) to the data and examine the t-table
 sarima(x,2,0,1)
 
+# Model Choice - I
+# 100xp
+# Based on the sample P/ACF pair of the logged and differenced varve data (dl_varve), an MA(1) was indicated. 
+#The best approach to fitting ARMA is to start with a low order model, and then try to add a parameter at a time to see if the results change.
+
+# In this exercise, you will fit various models to the dl_varve data and note the AIC and BIC for each model. In the next exercise, you will use these AICs and BICs to choose a model. 
+#Remember that you want to retain the model with the smallest AIC and/or BIC value.
+
+# A note before you start:
+
+# sarima(x, p = 0, d = 0, q = 1) and sarima(x, 0, 0, 1)
+
+# are the same.
+
+# Instructions
+# The package astsa is preloaded. The varve series has been logged and differenced as dl_varve <- diff(log(varve)).
+# Use sarima() to fit an MA(1) to dl_varve. Take a close look at the output of your sarima() command to see the AIC and BIC for this model.
+# Repeat the previous exercise, but add an MA parameter by fitting an MA(2) model. Based on AIC and BIC, is this an improvement over the previous model?
+# Instead of adding an MA parameter, add an AR parameter to the original MA(1) fit. That is, fit an ARMA(1,1) to dl_varve. Based on AIC and BIC, is this an 
+#improvement over the previous models?
+
+# Fit an MA(1) to dl_varve.   
+sarima(dl_varve, 0 ,0, 1)
+
+# Fit an MA(2) to dl_varve. Improvement?
+sarima(dl_varve, 0 ,0, 2)
+
+# Fit an ARMA(1,1) to dl_varve. Improvement?
+sarima(dl_varve, 1 ,0, 1)
+
