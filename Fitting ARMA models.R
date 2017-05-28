@@ -153,3 +153,18 @@ sarima(dl_varve, 0 ,0, 2)
 # Fit an ARMA(1,1) to dl_varve. Improvement?
 sarima(dl_varve, 1 ,0, 1)
 
+# Residual Analysis - I
+# 100xp
+# As you saw in the video, an sarima() run includes a residual analysis graphic. Specifically, the output shows (1) the standardized residuals, (2) the sample ACF of the residuals, (3) a normal Q-Q plot, and (4) the p-values corresponding to the Box-Ljung-Pierce Q-statistic.
+
+# In each run, check the four residual plots as follows:
+
+# The standardized residuals should behave as a white noise sequence with mean zero and variance one. Examime the residual plot for departures from this behavior.
+# The sample ACF of the residuals should look like that of white noise. Examine the ACF for departures from this behavior.
+# Normality is an essential assumption when fitting ARMA models. Examine the Q-Q plot for departures from normality and to identify outliers.
+# Use the Q-statistic plot to help test for departures from whiteness of the residuals.
+# As in the previous exercise, dl_varve <- diff(log(varve)), which is plotted below a plot of varve. The astsa package is preloaded.
+
+# Instructions
+# Use sarima() to fit an MA(1) to dl_varve and do a complete residual analysis as prescribed above. Make a note of what you see for the next exercise.
+# Use another call to sarima() to fit an ARMA(1,1) to dl_varve and do a complete residual analysis as prescribed above. Again, make a note of what you see for the next exercise.
