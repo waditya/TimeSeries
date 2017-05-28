@@ -98,3 +98,28 @@ acf2(x)
 # Fit an MA(1) to the data and examine the t-table
 sarima(x,0,0,1)
 
+# Fitting an ARMA model
+# 100xp
+# You are now ready to merge the AR model and the MA model into the ARMA model. We generated data from the ARMA(2,1) model,
+# Xt=Xt−1−.9Xt−2+Wt+.8Wt−1,
+# Xt=Xt−1−.9Xt−2+Wt+.8Wt−1,
+# x <- arima.sim(model = list(order = c(2, 0, 1), ar = c(1, -.9), ma = .8), n = 250). Look at the simulated data and the sample ACF and PACF pair to determine a possible model.
+
+# Recall that for ARMA(p,qp,q) models, both the theoretical ACF and PACF tail off. In this case, the orders are difficult to discern from data and it may not be clear if either the sample ACF or sample PACF is cutting off or tailing off. In this case, you know the actual model orders, so fit an ARMA(2,1) to the generated data. General modeling strategies will be discussed further in the course.
+
+# Instructions
+# The package astsa is preloaded. 250 ARMA(2,1) observations are in x.
+# As in the previous exercises, use plot() to plot the generated data in x and use acf2() to view the sample ACF and PACF pairs.
+# Use sarima() to fit an ARMA(2,1) to the generated data. Examine the t-table and compare the estimates to the true values.
+
+# astsa is preloaded
+
+# Plot x
+plot(x)
+
+# Plot the sample P/ACF of x
+acf2(x)
+
+# Fit an ARMA(2,1) to the data and examine the t-table
+sarima(x,2,0,1)
+
