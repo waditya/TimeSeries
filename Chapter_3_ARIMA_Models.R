@@ -119,3 +119,23 @@ sarima(x, 0, 1, 2)
 # Also, the AIC and BIC both increase when the parameter is added. 
 # In addition, the residual analysis of your ARIMA(0,1,1) model is fine. 
 # All of these facts together indicate that you have a successful model fit.
+
+# Diagnostics - Global Temperatures
+# 100xp
+# You can now finish your analysis of global temperatures. Recall that you previously fit two models to the data in globtemp, an ARIMA(1,1,1) and an ARIMA(0,1,2). In the final analysis, check the residual diagnostics and use AIC and BIC for model choice.
+
+# The data are plotted for you.
+
+# Instructions
+# Fit an ARIMA(0,1,2) model to globtemp and check the diagnositcs. What does the output tell you about the model?
+# Fit an ARIMA(1,1,1) model to globtemp and check the diagnostics.
+# Which is the better model? Type your answer into the blanks in your R workspace (ex. either ARIMA(0,1,2) or ARIMA(1,1,1)).
+
+# Fit ARIMA(0,1,2) to globtemp and check diagnostics  
+ sarima(globtemp, 0, 1, 2)
+
+# Fit ARIMA(1,1,1) to globtemp and check diagnostics
+sarima(globtemp, 1, 1, 1)
+
+# Which is the better model?
+"ARIMA(1,1,1)"
