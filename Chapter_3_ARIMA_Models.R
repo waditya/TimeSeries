@@ -78,4 +78,15 @@ sarima(x, 2, 1, 0)
 # Use sarima() to fit an ARIMA(1,1,1) model to globtemp. Are all the parameters significant?
 # Use another call to sarima() to fit an ARIMA(0,1,2) model to globtemp. Are all the parameters significant? Which model is better?
 
+# Plot the sample P/ACF pair of the differenced data 
+acf2(diff(globtemp))
+
+# Fit an ARIMA(1,1,1) model to globtemp
+sarima(globtemp, 1, 1, 1)
+
+# Fit an ARIMA(0,1,2) model to globtemp. Which model is better?
+sarima(globtemp, 0, 1, 2)
+
+# Excellent! Judging by the AIC and BIC, the ARIMA(0,1,2) model performs better than the ARIMA(1,1,1) model on the globtemp data. 
+# Remember to thoroughly examine the output of your sarima() command to gain a full understanding of your model.
 
