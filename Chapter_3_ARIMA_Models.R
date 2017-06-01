@@ -105,4 +105,13 @@ sarima(globtemp, 0, 1, 2)
 # Fit an ARIMA(0,1,1) model to the simulated data using sarima(). Compare the MA parameter estimate to the actual value of .9, and examine the residual plots.
 # Overfit the model by adding an additional MA parameter. That is, fit an ARIMA(0,1,2) to the data and compare it to the ARIMA(0,1,1) run.
 
+# Plot sample P/ACF pair of the differenced data
+acf2(diff(x))
+
+# Fit the first model, compare parameters, check diagnostics
+sarima(x, 0, 1, 1)
+
+# Fit the second model and compare fit
+sarima(x, 0, 1, 2)
+
 
