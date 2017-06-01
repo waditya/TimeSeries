@@ -114,4 +114,8 @@ sarima(x, 0, 1, 1)
 # Fit the second model and compare fit
 sarima(x, 0, 1, 2)
 
-
+# Great job! As you can see from the t-table, the second MA parameter is not significantly different 
+# from zero and the first MA parameter is approximately the same in each run. 
+# Also, the AIC and BIC both increase when the parameter is added. 
+# In addition, the residual analysis of your ARIMA(0,1,1) model is fine. 
+# All of these facts together indicate that you have a successful model fit.
