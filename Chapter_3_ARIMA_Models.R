@@ -34,3 +34,19 @@ plot(diff(x))
 # Plot the P/ACF pair of the differenced data
 acf2(diff(x))
 
+# Simulated ARIMA
+# 100xp
+# Before analyzing actual time series data, you should try working with a slightly more complicated model.
+
+# Here, we generated 250 observations from the ARIMA(2,1,0) model with drift given by
+# Yt=1+1.5Yt−1−.75Yt−2+Wt
+# Yt=1+1.5Yt−1−.75Yt−2+Wt
+# where Yt=∇Xt=Xt−Xt−1Yt=∇Xt=Xt−Xt−1.
+
+# You will use the established techniques to fit a model to the data.
+
+# The astsa package is preloaded and the generated data are in x. The series x and the detrended series y <- diff(x) have been plotted.
+
+# Instructions
+# Plot the sample ACF and PACF using acf2() of the differenced data diff(x) to determine a model.
+# Fit an ARIMA(2,1,0) model using sarima() to the generated data. Examine the t-table and other output information to assess the model fit.
