@@ -49,4 +49,13 @@ acf2(diff(x))
 
 # Instructions
 # Plot the sample ACF and PACF using acf2() of the differenced data diff(x) to determine a model.
-# Fit an ARIMA(2,1,0) model using sarima() to the generated data. Examine the t-table and other output information to assess the model fit.
+# Fit an ARIMA(2,1,0) model using sarima() to the generated data. Examine the t-table and other output information 
+# to assess the model fit.
+
+# Plot sample P/ACF of differenced data and determine model
+acf2(y)
+
+
+# Estimate parameters and examine output
+sarima(x, 2, 1, 0)
+
