@@ -90,3 +90,19 @@ sarima(globtemp, 0, 1, 2)
 # Excellent! Judging by the AIC and BIC, the ARIMA(0,1,2) model performs better than the ARIMA(1,1,1) model on the globtemp data. 
 # Remember to thoroughly examine the output of your sarima() command to gain a full understanding of your model.
 
+# Diagnostics - Simulated Overfitting
+# 100xp
+# One way to check an analysis is to overfit the model by adding an extra parameter to see if it makes a difference in the results. If adding parameters changes the results drastically, then you should rethink your model. If, however, the results do not change by much, you can be confident that your fit is correct.
+
+# We generated 250 observations from an ARIMA(0,1,1) model with MA parameter .9. First, you will fit the model to the data using established techniques.
+
+# Then, you can check a model by overfitting (adding a parameter) to see if it makes a difference. In this case, you will add an additional MA parameter to see that it is not needed.
+
+# As usual, the astsa package is preloaded and the generated data in x are plotted in your workspace. The differenced data diff(x) are also plotted. Note that it looks stationary.
+
+# Instructions
+# Plot the sample ACF and PACF of the differenced data using acf2() and note that the model is easily identified.
+# Fit an ARIMA(0,1,1) model to the simulated data using sarima(). Compare the MA parameter estimate to the actual value of .9, and examine the residual plots.
+# Overfit the model by adding an additional MA parameter. That is, fit an ARIMA(0,1,2) to the data and compare it to the ARIMA(0,1,1) run.
+
+
