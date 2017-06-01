@@ -139,3 +139,11 @@ sarima(globtemp, 1, 1, 1)
 
 # Which is the better model?
 "ARIMA(1,1,1)"
+
+# Exellent! Your model diagnostics suggest that both the ARIMA(0,1,2) and the ARIMA(1,1,1) are reasonable models. 
+
+# However, the AIC and BIC suggest that the ARIMA(0,1,2) performs slightly better, so this should be your preferred model. 
+
+# Although you were not asked to do so, you can use overfitting to assess the final model. 
+
+# For example, try fitting an ARIMA(1,1,2) or an ARIMA(0,1,3) to the data.
