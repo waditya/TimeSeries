@@ -59,3 +59,4 @@ acf2(y)
 # Estimate parameters and examine output
 sarima(x, 2, 1, 0)
 
+#Excellent! As you can see from your t-table, the estimated parameters are very close to 1.5 and -0.75.
