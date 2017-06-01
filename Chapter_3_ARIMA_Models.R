@@ -60,3 +60,22 @@ acf2(y)
 sarima(x, 2, 1, 0)
 
 #Excellent! As you can see from your t-table, the estimated parameters are very close to 1.5 and -0.75.
+
+# Global Warming
+# 100xp
+# Now that you have some experience fitting an ARIMA model to simulated data, your next task is to apply your skills to some real world data.
+
+# The data in globtemp (from astsa) are the annual global temperature deviations to 2015. In this exercise, you will use established techniques to fit an ARIMA model to the data. A plot of the data shows random walk behavior, which suggests you should work with the differenced data. The differenced data diff(globtemp) are also plotted.
+
+# After plotting the sample ACF and PACF of the differenced data diff(globtemp), you can say that either
+
+# The ACF and the PACF are both tailing off, implying an ARIMA(1,1,1) model.
+# The ACF cuts off at lag 2, and the PACF is tailing off, implying an ARIMA(0,1,2) model.
+# The ACF is tailing off and the PACF cuts off at lag 3, implying an ARIMA(3,1,0) model. Although this model fits reasonably well, it is the worst of the three (you can check it) because it uses too many parameters for such small autocorrelations.
+# After fitting the first two models, check the AIC and BIC to choose the preferred model.
+# Instructions
+# Plot the sample ACF and PACF of the differenced data, diff(globtemp), to discover that 2 models seem reasonable, an ARIMA(1,1,1) and an ARIMA(0,1,2).
+# Use sarima() to fit an ARIMA(1,1,1) model to globtemp. Are all the parameters significant?
+# Use another call to sarima() to fit an ARIMA(0,1,2) model to globtemp. Are all the parameters significant? Which model is better?
+
+
