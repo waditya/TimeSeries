@@ -21,3 +21,16 @@
 # Use acf2() from astsa to plot the sample P/ACF pair for the generated data.
 # Plot the differenced data.
 # Use another call to acf2() to view the sample P/ACF pair for the differenced data. Note how they imply an AR(1) model for the differenced data.
+
+# Plot x
+plot(x)
+
+# Plot the P/ACF pair of x
+acf2(x)
+
+# Plot the differenced data
+plot(diff(x))
+
+# Plot the P/ACF pair of the differenced data
+acf2(diff(x))
+
