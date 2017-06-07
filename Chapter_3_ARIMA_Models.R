@@ -183,3 +183,9 @@ lines(y)
 # Instructions
 # Fit an ARIMA(0,1,2) model to the data using sarima(). Based on your previous analysis this was the best model for the globtemp data. Recheck the parameter significance in the t-table output and check the residuals for any departures from the model assumptions.
 # Use sarima.for() to forceast your global temperature data 35 years ahead to 2050 using the ARIMA(0,1,2) fit.
+
+# Fit an ARIMA(0,1,2) to globtemp and check the fit
+sarima(globtemp, 0, 1, 2)
+
+# Forecast data 35 years into the future
+ sarima.for(globtemp, n.ahead = 35, p = 0, d = 1, q = 2)
