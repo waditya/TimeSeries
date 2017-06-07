@@ -147,6 +147,20 @@ sarima(globtemp, 1, 1, 1)
 # Although you were not asked to do so, you can use overfitting to assess the final model. 
 
 # For example, try fitting an ARIMA(1,1,2) or an ARIMA(0,1,3) to the data.
+# Forecasting Simulated ARIMA
+
+# Now that you are an expert at fitting ARIMA models, you can use your skills for forecasting. First, you will work with simulated data.
+
+# We generated 120 observations from an ARIMA(1,1,0) model with AR parameter .9. The data are in y and the first 100 observations are in x. These observations are plotted for you. You will fit an ARIMA(1,1,0) model to the data in x and verify that the model fits well. Then use sarima.for() from astsa to forecast the data 20 time periods ahead. You will then compare the forecasts to the actual data in y.
+
+# The basic syntax for forecasting is sarima.for(data, n.ahead, p, d, q) where n.ahead is a positive integer that specifies the forecast horizon. The predicted values and their standard errors are printed, the data are plotted in black, and the forecasts are in red along with 2 mean square prediction error bounds as blue dashed lines.
+
+# The astsa package is preloaded and the data (x) and differenced data (diff(x)) are plotted.
+
+# Instructions
+# Plot the sample ACF and PACF of the differenced data to determine a model.
+# Use sarima() to fit an ARIMA(1,1,0) to the data. Examine the output of your sarima() command to assess the fit and model diagnostics.
+# Use sarima.for() to forecast the data 20 time periods ahead. Compare it to the actual values.
 
 # Plot P/ACF pair of differenced data 
 acf2(diff(x))
