@@ -172,4 +172,14 @@ sarima(x, 1, 1, 0)
 sarima.for(x, n.ahead = 20, p = 1, d = 1, q = 0) 
 lines(y)  
 
- 
+ # Forecasting Global Temperatures
+
+# Now you can try forecasting real data.
+
+# Here, you will forecast the annual global temperature deviations globtemp to 2050. Recall that in previous exercises, you fit an ARIMA(0,1,2) model to the data. You will refit the model to confirm it, and then forecast the series 35 years into the future.
+
+# The astsa package is preloaded and the data are plotted.
+
+# Instructions
+# Fit an ARIMA(0,1,2) model to the data using sarima(). Based on your previous analysis this was the best model for the globtemp data. Recheck the parameter significance in the t-table output and check the residuals for any departures from the model assumptions.
+# Use sarima.for() to forceast your global temperature data 35 years ahead to 2050 using the ARIMA(0,1,2) fit.
