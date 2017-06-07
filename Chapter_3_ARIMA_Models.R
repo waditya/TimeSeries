@@ -147,3 +147,15 @@ sarima(globtemp, 1, 1, 1)
 # Although you were not asked to do so, you can use overfitting to assess the final model. 
 
 # For example, try fitting an ARIMA(1,1,2) or an ARIMA(0,1,3) to the data.
+
+# Plot P/ACF pair of differenced data 
+acf2(diff(x))
+
+# Fit model - check t-table and diagnostics
+sarima(x, 1, 1, 0)
+
+# Forecast the data 20 time periods ahead
+sarima.for(x, n.ahead = 20, p = 1, d = 1, q = 0) 
+lines(y)  
+
+ 
