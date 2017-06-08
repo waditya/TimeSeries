@@ -129,4 +129,5 @@ sarima(birth, 0 , 1, 1, 0 ,1 ,1 , S= 12)
 # Add AR term and conclude
 sarima(birth, p = 1 , 1, 1, 0 ,1 ,1 , S= 12)
 
-
+# The residual analysis from the first fit indicated that the residuals were not white noise. 
+# Hence, it was necessary to include an additional nonseasonal AR term to account for the extra correlation.
