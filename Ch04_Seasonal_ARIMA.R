@@ -61,3 +61,10 @@ plot(dd_unemp)
 # Hint
 # To fit an appropriate model, use sarima(unemp, p = 2, d = 1, q = 0, P = 0, D = 1, Q = 1, S = 12) or simply sarima(unemp, 2, 1, 0, 0, 1, 1, 12) for short.
 
+# Plot P/ACF pair of the fully differenced data to lag 60
+dd_unemp <- diff(diff(unemp), lag = 12)
+acf2(dd_unemp, max.lag = 60)
+
+# Fit an appropriate model
+sarima(unemp, p = 2, d = 1, q = 0, P = 0, D = 1, Q = 1, S = 12)
+
