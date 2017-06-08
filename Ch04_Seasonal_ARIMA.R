@@ -17,3 +17,17 @@ acf2(x, max.lag = 60)
 
 # Fit the seasonal model to x
 sarima(x, p = 0, d = 0, q = 1, P = 0 , D = 0, Q = 1, S = 12 )
+
+# Data Analysis - Unemployment I
+# 100xp
+# In the video, we fit a seasonal ARIMA model to the log of the monthly AirPassengers data set. You will now start to fit a seasonal ARIMA model to the monthly US unemployment data, unemp, from the astsa package.
+
+# The first thing to do is to plot the data, notice the trend and the seasonal persistence. Then look at the detrended data and remove the seasonal persistence. After that, the fully differenced data should look stationary.
+
+# The astsa package is preloaded in your workspace.
+
+# Instructions
+# Plot the monthly US unemployment (unemp) time series from astsa. Note trend and seasonality.
+# Detrend and plot the data. Save this as d_unemp. Notice the seasonal persistence.
+# Seasonally difference the detrended series and save this as dd_unemp. Plot this new data and notice that it looks stationary now.
+
