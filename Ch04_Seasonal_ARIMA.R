@@ -88,3 +88,14 @@ sarima(unemp, p = 2, d = 1, q = 0, P = 0, D = 1, Q = 1, S = 12)
 # Fit an ARIMA(2,1,0) to the chicken data to see that there is correlation remaining in the residuals.
 # Fit an SARIMA(2,1,0)x(1,0,0)12 and notice the model fits well.
 
+# Plot differenced chicken
+plot(diff(chicken))
+
+# Plot P/ACF pair of differenced data to lag 60
+acf2(diff(chicken) , max.lag = 60)
+
+# Fit ARIMA(2,1,0) to chicken - not so good
+sarima(chicken, p = 2, d = 1, q = 0)
+
+# Fit SARIMA(2,1,0,1,0,0,12) to chicken - that works
+sarima(chicken, p = 2, d = 1, q = 0 , P = 1 , D = 0, Q = 0, S = 12)
