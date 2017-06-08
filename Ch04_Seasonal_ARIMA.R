@@ -31,3 +31,16 @@ sarima(x, p = 0, d = 0, q = 1, P = 0 , D = 0, Q = 1, S = 12 )
 # Detrend and plot the data. Save this as d_unemp. Notice the seasonal persistence.
 # Seasonally difference the detrended series and save this as dd_unemp. Plot this new data and notice that it looks stationary now.
 
+# Plot unemp 
+plot(unemp)
+
+# Difference your data and plot it
+d_unemp <- diff(unemp)
+plot(d_unemp)
+
+# Seasonally difference d_unemp and plot it
+dd_unemp <- diff(d_unemp, lag = 12)  
+
+plot(dd_unemp)
+
+# Now that you have removed the trend and seasonal variation in unemployment, the data appear to be stationary.
