@@ -102,3 +102,16 @@ sarima(chicken, p = 2, d = 1, q = 0 , P = 1 , D = 0, Q = 0, S = 12)
 
 # You have successfully fit an ARIMA model to a commodity.
 # If you are interested in analyzing other commodities from various regions, you can find many different time series at index mundi
+
+# Data Analysis - Birth Rate
+
+# Now you will use your new skills to carefully fit an SARIMA model to the birth time series from astsa. The data are monthly live births (adjusted) in thousands for the United States, 1948-1979, and includes the baby boom after WWII.
+
+# The birth data are plotted in your R console. Note the long-term trend (random walk) and the seasonal component of the data.
+
+# Instructions
+# Use diff() to difference the data (d_birth). Use acf2() to view the sample ACF and PACF of this data to lag 60. Notice the seasonal persistence.
+# Use another call to diff() to take the seasonal difference of the data. Save this to dd_birth. Use another call to acf2() to view the ACF and PACF of this data, again to lag 60. Conclude that an SARIMA(0,1,1)x(0,1,1)12 model seems reasonable.
+# Fit the SARIMA(0,1,1)x(0,1,1)12 model. What happens?
+# Add an additional AR (nonseasonal, p = 1) parameter to account for additional correlation. Does the model fit well?
+
