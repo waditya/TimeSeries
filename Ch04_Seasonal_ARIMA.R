@@ -147,3 +147,16 @@ sarima(unemp, p = 2 , 1, 0, 0 ,1 ,1 , S= 12)
 
 # Forecast the data 3 years into the future
 sarima.for(unemp, n.ahead = 36,  p = 2 , 1, 0, 0 ,1 ,1 , S= 12)
+
+# How Hard is it to Forecast Commodity Prices?
+
+# As previously mentioned, making money in commodities is not easy. To see a difficulty in predicting a commodity, you will forecast the price of chicken to five years in the future. When you complete your forecasts, you will note that even just a few years out, the acceptable range of prices is very large. This is because commodities are subject to many sources of variation.
+
+# Recall that you previously fit an SARIMA(2,1,0, 1,0,0)12 model to the monthly US chicken price series chicken. You will use this model to calculate your forecasts.
+
+# The astsa package is preloaded for you and the monthly price of chicken data (chicken) are plotted on the right.
+
+# Instructions
+# Refit the SARIMA model from the earlier exercise and convince yourself that it fits well. Check parameter significance and residual diagnostics.
+# Use sarima.for() to forecast the data 5 years into the future.
+
