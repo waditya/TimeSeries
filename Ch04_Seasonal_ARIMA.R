@@ -160,3 +160,11 @@ sarima.for(unemp, n.ahead = 36,  p = 2 , 1, 0, 0 ,1 ,1 , S= 12)
 # Refit the SARIMA model from the earlier exercise and convince yourself that it fits well. Check parameter significance and residual diagnostics.
 # Use sarima.for() to forecast the data 5 years into the future.
 
+# Fit the chicken model again and check diagnostics
+sarima(chicken, 2,1,0, 1,0,0, 12 )
+
+# Forecast the chicken data 5 years into the future
+sarima.for(chicken, n.ahead = 60,2,1,0, 1,0,0, 12  )
+
+# You have now mastered the process of detrending your time series data, exploring the qualities of the data to determine an 
+# appropriate model, fitting and adjusting a model, and even forecasting based on the model!
