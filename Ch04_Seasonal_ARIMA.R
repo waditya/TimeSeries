@@ -115,3 +115,18 @@ sarima(chicken, p = 2, d = 1, q = 0 , P = 1 , D = 0, Q = 0, S = 12)
 # Fit the SARIMA(0,1,1)x(0,1,1)12 model. What happens?
 # Add an additional AR (nonseasonal, p = 1) parameter to account for additional correlation. Does the model fit well?
 
+# Plot P/ACF to lag 60 of differenced data
+d_birth <- diff(birth)
+acf2(d_birth, max.lag = 60)
+
+# Plot P/ACF to lag 60 of seasonal differenced data
+dd_birth <- diff(d_birth, lag = 12)
+acf2(dd_birth, max.lag = 60)
+
+# Fit SARIMA(0,1,1)x(0,1,1)_12. What happens?
+sarima(birth, 0 , 1, 1, 0 ,1 ,1 , S= 12)
+
+# Add AR term and conclude
+sarima(birth, p = 1 , 1, 1, 0 ,1 ,1 , S= 12)
+
+
