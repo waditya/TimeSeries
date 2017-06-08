@@ -141,3 +141,9 @@ sarima(birth, p = 1 , 1, 1, 0 ,1 ,1 , S= 12)
 # Instructions
 # Begin by again fitting the model used earlier in this chapter (using the sarima() command). Recheck the parameter significance and residual diagnostics.
 # Use sarima.for() to forecast the data 3 years into the future.
+
+# Fit your previous model to unemp and check the diagnostics
+sarima(unemp, p = 2 , 1, 0, 0 ,1 ,1 , S= 12)
+
+# Forecast the data 3 years into the future
+sarima.for(unemp, n.ahead = 36,  p = 2 , 1, 0, 0 ,1 ,1 , S= 12)
