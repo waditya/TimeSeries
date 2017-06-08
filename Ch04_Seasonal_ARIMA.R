@@ -44,3 +44,20 @@ dd_unemp <- diff(d_unemp, lag = 12)
 plot(dd_unemp)
 
 # Now that you have removed the trend and seasonal variation in unemployment, the data appear to be stationary.
+
+# Data Analysis - Unemployment II
+
+# Now, you will continue fitting an SARIMA model to the monthly US unemployment unemp time series by looking at the sample ACF and PACF of the fully differenced series.
+
+# Note that the lag axis in the sample P/ACF plot is in terms of years. Thus, lags 1, 2, 3, ... represent 1 year (12 months), 2 years (24 months), 3 years (36 months), ...
+
+# Once again, the astsa package is preloaded in your workspace.
+
+# Instructions
+# Difference the data fully (as in the previous exercise) and plot the sample ACF and PACF of the transformed data to lag 60 months (5 years). Consider that, for
+# the nonseaonal component: the PACF cuts off at lag 2 and the ACF tails off.
+# the seasonal component: the ACF cuts off at lag 12 and the PACF tails off at lags 12, 24, 36, ...
+# Suggest and fit a model using sarima(). Check the residuals to ensure appropriate model fit.
+# Hint
+# To fit an appropriate model, use sarima(unemp, p = 2, d = 1, q = 0, P = 0, D = 1, Q = 1, S = 12) or simply sarima(unemp, 2, 1, 0, 0, 1, 1, 12) for short.
+
