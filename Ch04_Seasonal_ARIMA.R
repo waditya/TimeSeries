@@ -131,3 +131,13 @@ sarima(birth, p = 1 , 1, 1, 0 ,1 ,1 , S= 12)
 
 # The residual analysis from the first fit indicated that the residuals were not white noise. 
 # Hence, it was necessary to include an additional nonseasonal AR term to account for the extra correlation.
+
+# Forecasting Monthly Unemployment
+
+# Previously, you fit an SARIMA(2,1,0, 0,1,1)12 model to the monthly US unemployment time series unemp. You will now use that model to forecast the data 3 years.
+
+# The unemp data are preloaded into your R workspace and plotted on the right.
+
+# Instructions
+# Begin by again fitting the model used earlier in this chapter (using the sarima() command). Recheck the parameter significance and residual diagnostics.
+# Use sarima.for() to forecast the data 3 years into the future.
