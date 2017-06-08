@@ -68,3 +68,4 @@ acf2(dd_unemp, max.lag = 60)
 # Fit an appropriate model
 sarima(unemp, p = 2, d = 1, q = 0, P = 0, D = 1, Q = 1, S = 12)
 
+# , keep a close eye on the output from your sarima() command to get a feel for the fit of your model.
