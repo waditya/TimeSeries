@@ -69,3 +69,22 @@ acf2(dd_unemp, max.lag = 60)
 sarima(unemp, p = 2, d = 1, q = 0, P = 0, D = 1, Q = 1, S = 12)
 
 # , keep a close eye on the output from your sarima() command to get a feel for the fit of your model.
+
+# Data Analysis - Commodity Prices
+
+# Making money in commodities is not easy. Most commodities traders lose money rather than make it. The package astsa includes the data set chicken, which is the monthly whole bird spot price, Georgia docks, US cents per pound, from August, 2001 to July, 2016.
+
+# The astsa package is preloaded in your R console and the data are plotted for you, note the trend and seasonal components.
+
+# First, you will use your skills to carefully fit an SARIMA model to the commodity. Later, you will use the fitted model to try and forecast the whole bird spot price.
+
+# After removing the trend, the sample ACF and PACF suggest an AR(2) model because the PACF cuts off after lag 2 and the ACF tails off. However, the ACF has a small seasonal component remaining. This can be taken care of by fitting an addition SAR(1) component.
+
+# By the way, if you are interested in analyzing other commodities from various regions, you can find many different time series at index mundi.
+
+# Instructions
+# Plot the differenced (d = 1) data diff(chicken). Note that the trend is removed and note the seasonal behavior.
+# Plot the sample ACF and PACF of the differenced data to lag 60 (5 years). Notice that an AR(2) seems appropriate but there is a small but significant seasonal component remaining in the detrended data.
+# Fit an ARIMA(2,1,0) to the chicken data to see that there is correlation remaining in the residuals.
+# Fit an SARIMA(2,1,0)x(1,0,0)12 and notice the model fits well.
+
