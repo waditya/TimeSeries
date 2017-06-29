@@ -81,3 +81,21 @@ lines(data$microsoft, main = "microsoft", sub = "Daily closing price since 2015"
 # Reduce margin size (mex) to 60% of its normal size and replot
 
 # Reduce margin size and character size (cex) to 80% of their normal size and replot
+
+# 2 charts on the same graphical window
+par(mfrow = c(2,1))
+plot(data$yahoo, main = "yahoo")
+plot(data$microsoft, main = "microsoft")
+
+# Reduce margin size
+par(mfrow = c(2,1), mex = 0.6)
+plot(data$yahoo, main = "yahoo")
+plot(data$microsoft, main = "microsoft")
+
+
+# Reduce margin size and charater size
+par(mfrow = c(2,1), mex = 0.6, cex = 0.8)
+plot(data$yahoo, main = "yahoo")
+plot(data$microsoft, main = "microsoft")
+
+
