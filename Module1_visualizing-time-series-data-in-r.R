@@ -31,3 +31,21 @@ plot(data$yahoo, main = "yahoo")
 
 # Change X and Y axis labels 
 plot(data$yahoo,main = "yahoo", xlab = "date", ylab = "price")
+
+# Plot function - basic parameters (2)
+
+# More customization can be achieved with the plot() function using other options. Should you want to:
+
+# Use bars instead of points - type
+# Add a subtitle to your chart - sub
+# Change the color of the line -col
+# Make the line thicker or narrower - lwd
+
+
+
+# Instructions
+# Plot the second time series and change the title of the chart to "microsoft"
+# Include a subtiltle: "Daily closing price since 2015"
+# Use bars instead of points for the chart type
+# Change the color of the line to red
+
