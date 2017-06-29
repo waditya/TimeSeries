@@ -59,4 +59,6 @@ plot(data$microsoft, main = "microsoft", sub = "Daily closing price since 2015")
 plot(data$microsoft, main = "microsoft", sub = "Daily closing price since 2015", type = "h")
 
 # Change the color of the line to red
-plot(data$microsoft, main = "microsoft", sub = "Daily closing price since 2015", type = "h")
+lines(data$microsoft, main = "microsoft", sub = "Daily closing price since 2015", type = "h",col = "red")
+
+
