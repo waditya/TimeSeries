@@ -19,3 +19,15 @@
 # In this exercise, you will use the dataset (data) containing the daily stocks price for 4 companies since 2015.
 
  # The column titles are: yahoo, microsoft, citigroup and dow_chemical.
+
+# Display the first few lines of the dataset 
+head(data, n = 15)
+
+# Create your plot here
+plot(data$yahoo)
+
+# Add a title to the plot 
+plot(data$yahoo, main = "yahoo")
+
+# Change X and Y axis labels 
+plot(data$yahoo,main = "yahoo", xlab = "date", ylab = "price")
