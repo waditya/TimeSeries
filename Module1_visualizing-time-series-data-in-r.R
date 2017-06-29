@@ -108,3 +108,20 @@ plot(data$microsoft, main = "microsoft")
 # Add a new Y axis on the right side of the chart
 # Add a legend in the bottom right corner with the names of the stocks
 
+# Adding an extra series to an existing chart
+
+# Sometimes you might want to compare two times series. 
+
+# The best way to do this visually is to display them on the same chart with different scales. 
+
+# You will need to use the axis() and legend() functions. 
+
+# You are provided with the same dataset as before. Let's make a pretty chart.
+
+# Instructions
+
+# Plot the "microsoft" series and add the title, "Stock prices since 2015"
+# Add the "dow_chemical" series to the chart using lines()
+# Add a new Y axis on the right side of the chart
+# Add a legend in the bottom right corner with the names of the stocks
+
