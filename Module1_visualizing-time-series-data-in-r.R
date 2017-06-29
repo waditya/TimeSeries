@@ -49,3 +49,14 @@ plot(data$yahoo,main = "yahoo", xlab = "date", ylab = "price")
 # Use bars instead of points for the chart type
 # Change the color of the line to red
 
+# Plot the second time series and change the title
+plot(data$microsoft, main = "microsoft")
+
+# Include a subtitle
+plot(data$microsoft, main = "microsoft", sub = "Daily closing price since 2015")
+
+# Use bars instead of points
+plot(data$microsoft, main = "microsoft", sub = "Daily closing price since 2015", type = "h")
+
+# Change the color of the line to red
+plot(data$microsoft, main = "microsoft", sub = "Daily closing price since 2015", type = "h")
